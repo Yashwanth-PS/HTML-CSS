@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            border-radius: 4px;
+            margin: 10px;
+        } /* Static */
+        .red {
+            background-color: red;
+            position: relative;
+            left: 120px; /* 120px from left - Move Away from where it was suppose to be */
+            top: 114px; /* 114px from top - Move Away from where it was suppose to be */
+        }
+        .blue {
+            background-color: blue;
+        } /* Relative */
+        .green {
+            background-color: green;
+            position: relative;
+            left: 120px; /* 120px from left - Move Away from where it was suppose to be */
+            top: 114px; /* 114px from top - Move Away from where it was suppose to be */
+            z-index: 1;
+        }
+        .yellow {
+            background-color: yellow;
+            position: relative;
+            left: 100px; /* 100px from left - Move Away from where it was suppose to be */
+        } /* Absolute */
+        .container {
+            padding: 10px;
+            margin: 5px;
+            border: 2px solid black;
+            border-radius: 4px;
+            background-color: lightblue;
+            position: relative;
+        }
+        .pink {
+            position: absolute;
+            background-color: pink;
+        }
+        .silver {
+            left: 120px;
+            position: relative;
+            background-color: silver;
+        }
+        .gold {
+            position: absolute;
+            background-color: gold;
+        }
+        .purple {
+            top: 5px;
+            left: 20px;
+            position: relative;
+            background-color: purple;
+        } /* Fixed */
+        .orange {
+            width: 50px;
+            height: 50px;
+            bottom: 10px;
+            right: 10px;
+            border-radius: 50%;
+            position: fixed;
+            background-color: orange;
+        } /* Sticky */
+        .brown {
+            width: 75px;
+            height: 75px;
+            position: sticky;
+            top: 10px;
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="box red"></div>
+        <div class="box blue"></div>
+        <div class="box brown"></div>
+        <div class="box green"></div>
+        <div class="box yellow"></div>
+        <div class="container">
+            <div class="box pink"></div>
+            <div class="box silver"></div>
+        </div>
+        <div class="box gold"></div>
+        <div class="box purple"></div>
+        <div class="box orange"></div>
+    </div>
+</body>
+</html>
