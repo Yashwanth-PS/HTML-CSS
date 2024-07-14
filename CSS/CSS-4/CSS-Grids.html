@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grids</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin: 20px;
+            padding: 10px;
+            /* border: 2px solid #333; */
+            height: 600px;
+            display: grid;
+            grid-template-columns: 1fr minmax(100px, 2fr) 1fr;
+            grid-template-rows: repeat(3, 200px)
+            /* Short Hand 
+            grid-template: 200px 200px 200px / 1fr minmax(100px, 2fr) 1fr; */
+        }
+        .item {
+            /* width: 100px;
+            height: 100px; */
+            background-color: lightblue;
+            border: 1px solid black;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1"></div>
+        <div class="item item-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem harum eaque magni enim nihil hic maiores ullam aliquid in, aspernatur officia incidunt possimus deleniti quaerat et excepturi animi, earum dolor. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse odit architecto sapiente, laboriosam veniam hic iure eligendi odio? Sit laborum sequi deserunt excepturi asperiores aliquam ut esse quaerat error molestias.</div>
+        <div class="item item-3"></div>
+    </div>
+</body>
+</html>
