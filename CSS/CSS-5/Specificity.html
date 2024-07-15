@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity</title>
+    <style>
+        ul#summer-drinks li { /* Specificity Score - 0, 1, 0, 2 --> 102 */
+            color: blue; /* !important */
+            font-size: 20px;
+            font-weight: normal; /* !important */
+        } /* .favorite --> Just This wont work due to conflict, Specificity Score - 0, 0, 1, 0 --> 10 --> Least Specific */
+        ul#summer-drinks li.favorite { /* Specificity Score - 0, 1, 1, 2 --> 112 --> More Specific */
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <ul id="summer-drinks">
+        <li class="drink favorite" style="color: green">Lemonade</li>
+        <li class="drink">Ice Tea</li>
+        <li class="drink">Soda</li>
+    </ul>
+</body>
+</html>
